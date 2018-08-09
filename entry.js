@@ -1,30 +1,30 @@
 import {Adapter} from './components/adapter';
-import AntdFcGroup from './components/antd-fc-group.vue';
-import AntdFcForm from './components/antd-fc-form.vue';
-import AntdFcStatic from './components/antd-fc-static.vue';
-import AntdFcText from './components/antd-fc-text.vue';
-import AntdFcTextArea from './components/antd-fc-textarea.vue';
-import AntdFcDate from './components/antd-fc-date.vue';
-import AntdFcDateRange from './components/antd-fc-date-range.vue';
-import AntdFcButtonlist from './components/antd-fc-buttonlist.vue';
-import AntdFcNumberRange from './components/antd-fc-number-range.vue';
-import AntdFcNumber from './components/antd-fc-number.vue';
-import AntdFcSelect from './components/antd-fc-select.vue';
-import AntdFcTree from './components/antd-fc-tree.vue';
-import AntdFcUploadfile from './components/antd-fc-uploadfile.vue';
-import AntdFcAutocomplete from './components/antd-fc-autocomplete.vue';
-import AntdFcRadiolist from './components/antd-fc-radiolist.vue';
-import AntdFcCheckboxlist from './components/antd-fc-checkboxlist.vue';
-import AntdFcSwitcher from './components/antd-fc-switcher.vue';
-import AntdGbGrid from './components/antd-gb-grid.vue';
-import AntdGbSearch from './components/antd-gb-search.vue';
+import DidiFcGroup from './components/didi-fc-group.vue';
+import DidiFcForm from './components/didi-fc-form.vue';
+import DidiFcStatic from './components/didi-fc-static.vue';
+import DidiFcText from './components/didi-fc-text.vue';
+import DidiFcCell from './components/didi-fc-cell.vue';
+import DidiFcReadonly from './components/didi-fc-readonly.vue';
+// import AntdFcDate from './components/antd-fc-date.vue';
+// import AntdFcDateRange from './components/antd-fc-date-range.vue';
+// import AntdFcButtonlist from './components/antd-fc-buttonlist.vue';
+// import AntdFcNumberRange from './components/antd-fc-number-range.vue';
+// import AntdFcNumber from './components/antd-fc-number.vue';
+// import AntdFcSelect from './components/antd-fc-select.vue';
+// import AntdFcTree from './components/antd-fc-tree.vue';
+// import AntdFcUploadfile from './components/antd-fc-uploadfile.vue';
+// import AntdFcAutocomplete from './components/antd-fc-autocomplete.vue';
+// import AntdFcRadiolist from './components/antd-fc-radiolist.vue';
+// import AntdFcCheckboxlist from './components/antd-fc-checkboxlist.vue';
+// import AntdFcSwitcher from './components/antd-fc-switcher.vue';
+// import AntdGbGrid from './components/antd-gb-grid.vue';
+// import AntdGbSearch from './components/antd-gb-search.vue';
 import LayoutTmb from './layout/layout-tmb.vue';
 import Form from './components/form.js';
 import { defaults } from "tg-turing";
 
 const components = {
-    AntdFcGroup,AntdFcForm,AntdFcStatic,AntdFcText,AntdFcTextArea,AntdFcDate,AntdFcDateRange,AntdFcButtonlist,AntdFcNumberRange,AntdFcNumber,AntdFcSelect,AntdFcUploadfile,AntdFcTree,AntdFcAutocomplete,AntdFcRadiolist,AntdFcSwitcher,AntdGbGrid,AntdGbSearch,AntdFcCheckboxlist,
-    LayoutTmb
+    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,DidiFcCell,DidiFcReadonly,LayoutTmb
 };
 const install = function (Vue, opts = {}) {
     if (install.installed) return;
@@ -78,11 +78,11 @@ if (!("classList" in document.documentElement)) {
     });
 }
 
-defaults.antd = {
+defaults.didi = {
     Adapter: Adapter,
     form: Form
 };
-defaults.currentType = "antd";
+defaults.currentType = "didi";
 
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);

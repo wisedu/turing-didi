@@ -1,119 +1,131 @@
 export default {
     "static": {
-        name: "antd-fc-static"
+        name: "didi-fc-static"
     },
     "text": {
-        name: "antd-fc-text",
+        name: "didi-fc-text",
         required: {
-            trigger: "blur",
             message: "不能为空"
         }
     },
     "textarea": {
-        name: "antd-fc-textarea",
+        name: "didi-fc-textarea",
         required: {
-            trigger: "blur",
             message: "不能为空"
         }
     },
     "date": {
-        name: "antd-fc-date",
+        name: "didi-fc-date",
         required: {
-            trigger: "blur",
+            message: "不能为空"
+        }
+    },
+    "date-ym": {
+        name: "didi-fc-date",
+        required: {
             message: "不能为空"
         }
     },
     "date-range": {
-        name: "antd-fc-date-range",
+        name: "didi-fc-date-range",
         required: {
-            trigger: "blur",
             type: "array",
             message: "不能为空"
         }
     },
     "date-local": {
-        name: "antd-fc-date",
+        name: "didi-fc-date",
         required: {
-            trigger: "blur",
             message: "不能为空"
         }
     },
     "date-full": {
-        name: "antd-fc-date",
+        name: "didi-fc-date",
         required: {
-            trigger: "blur",
             message: "不能为空"
         }
     },
     "select": {
-        name: "antd-fc-select",
+        name: "didi-fc-select",
         default: {
             async: false
         },
         required: {
-            trigger: "change",
             message: "请选择一项"
         }
     },
     "multi-select": {
-        name: "antd-fc-select",
+        name: "didi-fc-select",
         default: {
             multiple: true
         },
         required: {
-            trigger: "change",
             type: 'array',
             min: 1,
             message: "请选择一项"
         }
     },
     "buttonlist": {
-        name: "antd-fc-buttonlist"
+        name: "didi-fc-buttonlist",
+        required: {
+            message: "不能为空"
+        }
     },
     "number-range": {
-        name: "antd-fc-number-range"
+        name: "didi-fc-number-range",
+        required: {
+            message: "不能为空"
+        }
     },
     "number": {
-        name: "antd-fc-number",
+        name: "didi-fc-number",
         required: {
-            trigger: "blur",
             type: "number",
             message: "请填写数字"
         }
     },
     "uploadfile": {
-        name: "antd-fc-uploadfile"
+        name: "didi-fc-uploadfile",
+        required: {
+            message: "请选择一项"
+        }
     },
     "tree": {
-        name: "antd-fc-tree",
+        name: "didi-fc-tree",
         required: {
-            trigger: "change",
             message: "请选择一项"
         }
     },
     "autocomplete": {
-        name: "antd-fc-autocomplete"
+        name: "didi-fc-autocomplete",
+        required: {
+            message: "不能为空"
+        }
     },
     "selecttable": {
-        name: "antd-fc-autocomplete"
+        name: "didi-fc-autocomplete",
+        required: {
+            message: "不能为空"
+        }
     },
     "radiolist": {
-        name: "antd-fc-radiolist",
+        name: "didi-fc-radiolist",
         required: {
-            trigger: "change",
             message: "请选择一项"
         }
     },
     "checkboxlist": {
-        name: "antd-fc-checkboxlist",
+        name: "didi-fc-checkboxlist",
         required: {
-            trigger: "change",
             type: 'array',
             min: 1,
             message: "请选择一项"
         }
     },
     "switcher": {
-        name: "antd-fc-switcher"
+        name: "didi-fc-switcher",
+        required: {
+            message: "不能为空"
+        }
     }
 }

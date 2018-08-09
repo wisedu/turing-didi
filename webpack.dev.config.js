@@ -5,6 +5,8 @@ const cleanWebpackPlugin = require("clean-webpack-plugin");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
+var TransformModulesPlugin = require('webpack-transform-modules-plugin')
+
 module.exports = {
     entry: {
         // 多入口文件
@@ -73,6 +75,7 @@ module.exports = {
             chunks: ["vendor","commons",'main'],  // 按需引入对应名字的js文件
             template: "./src/index.html"
         }),
+        new TransformModulesPlugin()
         // new htmlWebpackPlugin({
         //     filename: "detail.html",
         //     title: "detail",
@@ -85,6 +88,7 @@ module.exports = {
         extensions: [' ', '.js', '.json', '.vue', '.scss', '.css'],
         alias: {
             vue: 'vue/dist/vue.js',
+            'cube-ui': 'cube-ui/lib'
         }
     },
     watchOptions: {
@@ -96,7 +100,7 @@ module.exports = {
         inline: true,
         compress: true,
         host: '127.0.0.1',
-        port: 2500,
+        port: 2505,
         historyApiFallback: true,
         // proxy: {
         //     "/axsfw/code": {
