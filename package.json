@@ -1,8 +1,8 @@
 {
-  "name": "tg-turing-antd",
+  "name": "tg-turing-didi",
   "version": "1.12.7",
-  "main": "dist/tg-turing-antd.min.js",
-  "packageName": "tg-turing-antd",
+  "main": "dist/tg-turing-didi.min.js",
+  "packageName": "tg-turing-didi",
   "license": "MIT",
   "dependencies": {
     "async-validator": "^1.8.5",
