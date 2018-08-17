@@ -4,7 +4,6 @@
 
 <script>
 import {ConnectItem} from 'tg-turing'
-import DidiFcReadonly from './didi-fc-readonly'
 export default {
     name:"didi-fc-readonly",
     extends: ConnectItem,

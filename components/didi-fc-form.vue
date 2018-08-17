@@ -2,7 +2,7 @@
     <form :model="formValue" :label-width="labelWidth" :rules="validateRules" :class="{readonly:readonly}" class="cube-form_standard">
         <template v-for="item in fields" >
             <slot :name="item.name" :model="item" :value="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :ref="'field_' + item.name" :formReadonly="readonly">
-                <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'didi-fc-static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="item.readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
+                <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'didi-fc-static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
             </slot>
         </template>
     </form>
@@ -13,10 +13,8 @@ import didiForm from "./form";
 import DidiFcStatic from "./didi-fc-static.vue";
 import {FormConnector} from "tg-turing";
 import schema from 'async-validator';
-var descriptor = {
-  XSBH: {type: "string", required: true},
-  XM: {type: "string", required: true}
-};
+//registedComponentList(item, didiForm, 'didi-fc-static', item.index)
+
 export default {
     name:"didi-fc-form",
     extends: FormConnector,
@@ -27,7 +25,13 @@ export default {
         labelWidth:Number,
         value:Object
     },
+    watch:{
+        fields(val){
+            console.log(val)
+        }
+    },
     created(){
+        //debugger
         console.log(this.fields)
     },
     data(){
@@ -66,7 +70,10 @@ export default {
         },
         mergeDefaultParams(model) {
             //debugger
-            let defaultParams = didiForm[model.xtype].default;
+            let defaultParams = "";
+            if(didiForm[model.xtype]){
+                defaultParams = didiForm[model.xtype].default
+            }
             if (defaultParams !== undefined) {
                 return Object.assign({}, JSON.parse(JSON.stringify(defaultParams)), model);
             } else {

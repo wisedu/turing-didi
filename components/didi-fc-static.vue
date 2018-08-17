@@ -6,11 +6,11 @@
 
 <script>
 import {ConnectItem} from 'tg-turing'
-import DidiFcCell from './didi-fc-cell'
-import DidiFcReadonly from './didi-fc-readonly'
+import DidiFcCell from './cell'
+import DidiFcReadonly from './readonly'
 export default {
     name:"didi-fc-static",
-    extends: ConnectItem,
+    extends: ConnectItem
 }
 </script>
 

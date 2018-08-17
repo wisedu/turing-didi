@@ -1,13 +1,13 @@
 <template>
     <didi-fc-cell :model="model" :class="{'didi-fc-item-error':isValidate}" :ref="name">
-        <cube-input v-if="!readonly" slot="content" v-model="currentValue" :placeholder="placeholderText" class="van-field__control"></cube-input>
+        <cube-input v-if="!formReadonly && !readonly" slot="content" v-model="currentValue" :placeholder="placeholderText" class="van-field__control"></cube-input>
         <didi-fc-readonly v-else slot="content" :display="display" :value="value"></didi-fc-readonly>
     </didi-fc-cell>
 </template>
 
 <script>
 import {ConnectItem} from 'tg-turing'
-import DidiFcCell from './didi-fc-cell'
+import DidiFcCell from './cell'
 export default {
     name:"didi-fc-text",
     extends: ConnectItem,
@@ -31,6 +31,7 @@ export default {
         // }
     },
     created(){
+        //debugger
         this.currentValue = this.value;
     },
     watch:{

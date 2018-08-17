@@ -1,7 +1,7 @@
 <template>
     <div style="margin-top:16px;">
         <button @click="validateForm">校验</button>
-        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :validateRules.sync="tiledRules">
+        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :validateRules.sync="descriptor" :readonly="true">
         </tg-form>
     </div>
 </template>
@@ -109,7 +109,11 @@ export default {
                 "MZDM_DISPLAY":"汉族"
             },
             groupedRules:{},
-            tiledRules:{}
+            tiledRules:{},
+            descriptor : {
+                XSBH: {type: "string", required: true},
+                XM: {type: "string", required: true}
+            }
         }
     },
     methods:{
