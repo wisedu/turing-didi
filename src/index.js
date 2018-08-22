@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './app.vue'
 
-import Cube from 'cube-ui'
-import 'cube-ui/lib/cube.min.css';
-Vue.use(Cube)
+// import Cube from 'cube-ui'
+// import 'cube-ui/lib/cube.min.css';
+// Vue.use(Cube)
 
 import iView from 'bh-iview';
 import 'bh-iview/dist/styles/iview.css';
