@@ -1,9 +1,11 @@
 <template>
-    <div class="tg-mb-24">
+    <!-- <div class="tg-mb-24">
         <h4 class="didi-fc-group-title">{{name}}</h4>
-        <!-- <label>{{desc}}</label> -->
         <slot></slot>
-    </div>
+    </div> -->
+    <tg-cell-group :title="name">
+		<slot></slot>
+	</tg-cell-group>
 </template>
 
 <script>
@@ -17,13 +19,12 @@ export default {
 </script>
 
 <style>
-.didi-fc-group-title {
+/* .didi-fc-group-title {
     font-size: 16px;
     font-weight: 700;
-    /* border-left: 4px solid #3E50B4; */
     padding-left: 8px;
     line-height: 16px;
     min-height: 0;
     margin-bottom: 16px
-}
+} */
 </style>

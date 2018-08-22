@@ -2,7 +2,7 @@
     <form :model="formValue" :label-width="labelWidth" :rules="validateRules" :class="{readonly:readonly}" class="cube-form_standard">
         <template v-for="item in fields" >
             <slot :name="item.name" :model="item" :value="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :ref="'field_' + item.name" :formReadonly="readonly">
-                <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'didi-fc-static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
+                <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
             </slot>
         </template>
     </form>
@@ -10,16 +10,15 @@
 
 <script>
 import didiForm from "./form";
-import DidiFcStatic from "./didi-fc-static.vue";
 import {FormConnector} from "tg-turing";
 import schema from 'async-validator';
-//registedComponentList(item, didiForm, 'didi-fc-static', item.index)
+
 
 export default {
     name:"didi-fc-form",
     extends: FormConnector,
     components: {
-        DidiFcStatic
+        
     },
     props:{
         labelWidth:Number,
@@ -32,34 +31,62 @@ export default {
     },
     created(){
         //debugger
+        //console.log(schema)
+        //console.log(main)
         console.log(this.fields)
     },
     data(){
         return {
             //当前字段隐藏时，让listview组件所占位的格子也隐藏
             didiForm: didiForm,
-            validateResult:[]
+            validateResult:[],
+            window:window
         }
     },
     computed:{
     },
     methods: {
-        validate() {
+        validate(callback) {
             var that = this;
-            var validator = new schema(descriptor);
+            // var copyValidateRules = JSON.parse(JSON.stringify(this.validateRules));
+            // for( var k in copyValidateRules){
+            //     console.log(k+'长度:',copyValidateRules[k].length)
+            //     if(copyValidateRules[k].length === 1){
+            //         var caption = copyValidateRules[k][0].field.caption;
+            //         console.log('caption:'+caption)
+            //         var message = copyValidateRules[k][0].message;
+            //         console.log('message:'+message)
+            //         var total = message + caption;
+            //         this.validateRules[k][0].message=total;
+            //     }else {
+            //         copyValidateRules[k].forEach(function(item,index){
+            //             this.validateRules[k][index].message = item.message + item.field.caption;
+            //         });
+            //     }
+            // }
+            for( var k in this.validateRules){
+                this.validateRules[k].forEach(function(item,index){
+                    item.message +=item.field.caption;
+                });
+            }
+            var validator = new schema(this.validateRules);
             validator.validate(that.formValue, (errors, fields) => {
-                if(errors) {
+                //if(errors) {
                     // validation failed, errors is an array of all errors
                     // fields is an object keyed by field name with an array of
                     // errors per field
-                    return that.handleErrors(errors, fields);
-                }
+                    return that.handleErrors(errors, fields,callback);
+                //}
                 // validation passed
             });
             //this.$refs.form.validate(callback)
         },
-        handleErrors(errors,fields){
-            this.validateResult = fields
+        handleErrors(errors,fields,callback){
+            if(callback){
+                callback(errors,fields)
+            }else {
+                this.validateResult = fields;
+            }
             console.log(errors,fields)
         },
         validateField() {

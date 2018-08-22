@@ -9,7 +9,8 @@
     "bh-iview": "^1.3.1",
     "cube-ui": "^1.10.9",
     "tg-turing": "^1.15.4",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "tg-ui": "0.0.10"
   },
   "peerDependencies": {
     "bh-iview": "^1.3.0",

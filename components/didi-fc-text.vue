@@ -1,13 +1,20 @@
 <template>
     <didi-fc-cell :model="model" :class="{'didi-fc-item-error':isValidate}" :ref="name">
-        <cube-input v-if="!formReadonly && !readonly" slot="content" v-model="currentValue" :placeholder="placeholderText" class="van-field__control"></cube-input>
-        <didi-fc-readonly v-else slot="content" :display="display" :value="value"></didi-fc-readonly>
+        <tg-input 
+            v-if="!formReadonly && !readonly"
+            slot="content"
+            v-model="currentValue"
+            :placeholder="placeholderText"
+            type="text">
+        </tg-input>
+        <Static v-else slot="content" :display="display" :value="value"></Static>
     </didi-fc-cell>
 </template>
 
 <script>
-import {ConnectItem} from 'tg-turing'
-import DidiFcCell from './cell'
+import {ConnectItem} from 'tg-turing';
+import DidiFcCell from './cell';
+import Static from './static';
 export default {
     name:"didi-fc-text",
     extends: ConnectItem,
@@ -61,40 +68,14 @@ export default {
     },
     mounted(){
         
+    },
+    components: {
+      Static   
     }
 }
 
 
 </script>
 <style scope>
-.didi-fc-item-error .cube-input-field::-webkit-input-placeholder { /* WebKit browsers */ 
-    color:red !important;
-}
-</style>
-<style>
-.cube-form-label {
-    width:100px;
-}
-.cube-form-msg:before {
-    color:red;
-    content: "\E614";
-    padding-left: 5px;
-    font-family: cube-icon!important;
-    font-size: 20px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: .2px;
-    -moz-osx-font-smoothing: grayscale;
-}
-input {
-    text-indent: 0;
-    background: transparent;
-    border: 0 none;
-    resize:none; 
-    outline:none;  /*清除选中效果的默认蓝色边框 */
-    -webkit-appearance:none;  /*清除浏览器默认的样式 */
-    line-height: normal;   
-}
-
 
 </style>

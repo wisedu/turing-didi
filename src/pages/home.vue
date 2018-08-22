@@ -1,7 +1,7 @@
 <template>
     <div style="margin-top:16px;">
         <button @click="validateForm">校验</button>
-        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :validateRules.sync="descriptor" :readonly="true">
+        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :validateRules.sync="descriptor" :readonly="false">
         </tg-form>
     </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     data(){
         return {
             fields: inst.view("默认表单:form"),
-            fields_scd: inst.view("平铺表单:form"),
+            fields_scd: [],
             param:{
                 append:"11"
             },
@@ -129,6 +129,15 @@ export default {
         }
     },
     created(){
+        var ss = inst.view("平铺表单:form");
+        //debugger
+        var array = ss.map(function(item){
+            // if(item.name === 'XMPY'){
+            //     item.xtype = 'switch';
+            // }
+            return item
+        });
+        this.fields_scd = array;
         // this.$nextTick(()=>{
         //     this.fields = [{
         //     "name": "group:[正文控件]",

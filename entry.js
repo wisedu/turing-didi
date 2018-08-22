@@ -4,7 +4,7 @@ import DidiFcForm from './components/didi-fc-form.vue';
 import DidiFcStatic from './components/didi-fc-static.vue';
 import DidiFcText from './components/didi-fc-text.vue';
 import Cell from './components/cell.vue';
-import Readonly from './components/readonly.vue';
+import Static from './components/static.vue';
 // import AntdFcDate from './components/antd-fc-date.vue';
 // import AntdFcDateRange from './components/antd-fc-date-range.vue';
 // import AntdFcButtonlist from './components/antd-fc-buttonlist.vue';
@@ -22,9 +22,13 @@ import Readonly from './components/readonly.vue';
 import LayoutTmb from './layout/layout-tmb.vue';
 import Form from './components/form.js';
 import { defaults } from "tg-turing";
+import Vue from 'vue';
+import tgUi from 'tg-ui';
+import 'tg-ui/lib/index.css';
+Vue.use(tgUi)
 
 const components = {
-    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,Cell,Readonly,LayoutTmb
+    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,Cell,Static,LayoutTmb
 };
 const install = function (Vue, opts = {}) {
     if (install.installed) return;

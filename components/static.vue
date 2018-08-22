@@ -1,11 +1,11 @@
 <template>
-    <span>{{display !== undefined ? display : value}}</span>
+    <span class="didi-slot-span">{{display !== undefined ? display : value}}</span>
 </template>
 
 <script>
 import {ConnectItem} from 'tg-turing'
 export default {
-    name:"didi-fc-readonly",
+    name:"Static",
     extends: ConnectItem,
     props:{
         display:String|Number,
@@ -15,5 +15,8 @@ export default {
 </script>
 
 <style>
-
+.didi-slot-span {
+    height:34px;
+    line-height:34px;
+}
 </style>

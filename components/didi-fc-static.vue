@@ -1,16 +1,19 @@
 <template>
     <didi-fc-cell :model="model" v-model="value">
-        <didi-fc-readonly slot="content" :display="display" :value="value"></didi-fc-readonly>
+        <Static slot="content" :display="display" :value="value"></Static>
     </didi-fc-cell>
 </template>
 
 <script>
 import {ConnectItem} from 'tg-turing'
 import DidiFcCell from './cell'
-import DidiFcReadonly from './readonly'
+import Static from './static'
 export default {
     name:"didi-fc-static",
-    extends: ConnectItem
+    extends: ConnectItem,
+    components: {
+      Static   
+    }
 }
 </script>
 

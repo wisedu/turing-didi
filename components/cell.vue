@@ -1,10 +1,7 @@
 <template>
-    <div class="cube-form-item border-bottom-1px" :class="{'cube-form-item_required':model.required}" >
-        <div class="cube-form-label" v-show="model.caption"><span>{{model.caption}}</span></div>
-        <div class="cube-form-field cube-validator">
-            <slot name="content"></slot>
-        </div>
-    </div>
+    <tg-cell :title="model.caption" customized solid :required="model.required">
+        <slot name="content"></slot>
+    </tg-cell>
 </template>
 
 <script>
