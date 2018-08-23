@@ -11,12 +11,18 @@ export default {
             message: "不能为空"
         }
     },
-    // "textarea": {
-    //     name: "didi-fc-textarea",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // },
+    "textarea": {
+        name: "didi-fc-textarea",
+        required: {
+            message: "不能为空"
+        }
+    },
+    "stepper": {
+        name: "didi-fc-stepper",
+        required: {
+            message: "不能为空"
+        }
+    },
     // "date": {
     //     name: "didi-fc-date",
     //     required: {
@@ -117,12 +123,18 @@ export default {
     //         message: "不能为空"
     //     }
     // },
-    // "radiolist": {
-    //     name: "didi-fc-radiolist",
-    //     required: {
-    //         message: "请选择一项"
-    //     }
-    // },
+    "radio": {
+        name: "didi-fc-radio",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "radiolist": {
+        name: "didi-fc-radiolist",
+        required: {
+            message: "请选择一项"
+        }
+    },
     // "checkboxlist": {
     //     name: "didi-fc-checkboxlist",
     //     required: {
@@ -131,10 +143,10 @@ export default {
     //         message: "请选择一项"
     //     }
     // },
-    // "switcher": {
-    //     name: "didi-fc-switcher",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // }
+    "switcher": {
+        name: "didi-fc-switch",
+        required: {
+            message: "不能为空"
+        }
+    }
 }

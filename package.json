@@ -6,12 +6,12 @@
   "license": "MIT",
   "dependencies": {
     "async-validator": "^1.8.5",
-    "tg-turing": "^1.15.4",
+    "tg-turing": "^1.16.11",
     "vue": "^2.5.16",
     "tg-ui": "0.0.10"
   },
   "peerDependencies": {
-    "tg-turing": "^1.11.6",
+    "tg-turing": "^1.16.11",
     "vue": "^2.5.16"
   },
   "devDependencies": {

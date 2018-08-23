@@ -1,5 +1,5 @@
 <template>
-    <tg-cell :title="model.caption" customized solid :required="model.required">
+    <tg-cell :title="model.caption" customized solid :required="model.required" :align="align">
         <slot name="content"></slot>
     </tg-cell>
 </template>
@@ -15,7 +15,8 @@ export default {
         } 
     },
     props:{
-        model:Object
+        model:Object,
+        align:String
     },
     computed:{
         // currentValue(){

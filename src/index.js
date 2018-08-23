@@ -6,9 +6,9 @@ import App from './app.vue'
 // import 'cube-ui/lib/cube.min.css';
 // Vue.use(Cube)
 
-import iView from 'bh-iview';
-import 'bh-iview/dist/styles/iview.css';
-Vue.use(iView);
+// import iView from 'bh-iview';
+// import 'bh-iview/dist/styles/iview.css';
+// Vue.use(iView);
 
 import tgTuring from 'tg-turing';
 import 'tg-turing/dist/css/default/tg-turing.min.css';

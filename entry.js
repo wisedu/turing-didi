@@ -3,6 +3,11 @@ import DidiFcGroup from './components/didi-fc-group.vue';
 import DidiFcForm from './components/didi-fc-form.vue';
 import DidiFcStatic from './components/didi-fc-static.vue';
 import DidiFcText from './components/didi-fc-text.vue';
+import DidiFcRadio from './components/didi-fc-radio.vue';
+import DidiFcRadiolist from './components/didi-fc-radiolist.vue';
+import DidiFcSwitch from './components/didi-fc-switch.vue';
+import DidiFcTextarea from './components/didi-fc-textarea.vue';
+import DidiFcStepper from './components/didi-fc-stepper.vue';
 import Cell from './components/cell.vue';
 import Static from './components/static.vue';
 // import AntdFcDate from './components/antd-fc-date.vue';
@@ -28,7 +33,7 @@ import 'tg-ui/lib/index.css';
 Vue.use(tgUi)
 
 const components = {
-    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,Cell,Static,LayoutTmb
+    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,Cell,Static,DidiFcRadio,DidiFcRadiolist,DidiFcSwitch,DidiFcTextarea,DidiFcStepper,LayoutTmb
 };
 const install = function (Vue, opts = {}) {
     if (install.installed) return;
