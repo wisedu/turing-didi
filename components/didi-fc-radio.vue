@@ -85,5 +85,7 @@ export default {
 
 </script>
 <style scope>
-
+.tg-radio .md-radio-item .md-field-item-inner {
+    box-shadow:none !important;
+}
 </style>

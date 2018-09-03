@@ -111,8 +111,8 @@ export default {
             groupedRules:{},
             tiledRules:{},
             descriptor : {
-                XSBH: {type: "string", required: true},
-                XM: {type: "string", required: true}
+                // XSBH: [{type: "string", required: true}],
+                // XM: [{type: "string", required: true}]
             }
         }
     },
@@ -125,10 +125,15 @@ export default {
             this.tiledRules["XM"] = [{}];
         },
         validateForm(){
-            this.$refs.form.validate()
+            this.$refs.form.validate(this.validateResult)
+        },
+        validateResult(errors){
+            console.log(errors)
+            debugger
         }
     },
     created(){
+        var that = this;
         var ss = inst.view("平铺表单:form");
         //debugger
         var array = ss.map(function(item){
@@ -137,7 +142,11 @@ export default {
             // }
             return item
         });
-        this.fields_scd = array;
+        //debugger
+        //window.setTimeout(function(item){
+            that.fields_scd = array;
+        //},100);
+        
         // this.$nextTick(()=>{
         //     this.fields = [{
         //     "name": "group:[正文控件]",

@@ -8,6 +8,10 @@ import DidiFcRadiolist from './components/didi-fc-radiolist.vue';
 import DidiFcSwitch from './components/didi-fc-switch.vue';
 import DidiFcTextarea from './components/didi-fc-textarea.vue';
 import DidiFcStepper from './components/didi-fc-stepper.vue';
+import DidiFcUploadfile from './components/didi-fc-uploadfile.vue';
+import DidiFcUploadimg from './components/didi-fc-uploadimg.vue';
+import DidiFcAvatar from './components/didi-fc-avatar.vue';
+import Avatar from './components/avatar.vue';
 import Cell from './components/cell.vue';
 import Static from './components/static.vue';
 // import AntdFcDate from './components/antd-fc-date.vue';
@@ -30,10 +34,24 @@ import { defaults } from "tg-turing";
 import Vue from 'vue';
 import tgUi from 'tg-ui';
 import 'tg-ui/lib/index.css';
-Vue.use(tgUi)
-
+Vue.use(tgUi);
 const components = {
-    DidiFcGroup,DidiFcForm,DidiFcStatic,DidiFcText,Cell,Static,DidiFcRadio,DidiFcRadiolist,DidiFcSwitch,DidiFcTextarea,DidiFcStepper,LayoutTmb
+    DidiFcGroup,
+    DidiFcForm,
+    DidiFcStatic,
+    DidiFcText,
+    Cell,
+    Static,
+    Avatar,
+    DidiFcRadio,
+    DidiFcRadiolist,
+    DidiFcSwitch,
+    DidiFcTextarea,
+    DidiFcStepper,
+    DidiFcUploadfile,
+    DidiFcUploadimg,
+    DidiFcAvatar,
+    LayoutTmb
 };
 const install = function (Vue, opts = {}) {
     if (install.installed) return;

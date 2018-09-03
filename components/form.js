@@ -93,12 +93,30 @@ export default {
     //         message: "请填写数字"
     //     }
     // },
-    // "uploadfile": {
-    //     name: "didi-fc-uploadfile",
-    //     required: {
-    //         message: "请选择一项"
-    //     }
-    // },
+    "uploadfile": {
+        name: "didi-fc-uploadfile",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "uploadsingleimage": {
+        name: "didi-fc-uploadimg",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "uploadmuiltimage": {
+        name: "didi-fc-uploadimg",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "avatar": {
+        name: "didi-fc-avatar",
+        required: {
+            message: "请选择一项"
+        }
+    },
     // "tree": {
     //     name: "didi-fc-tree",
     //     required: {

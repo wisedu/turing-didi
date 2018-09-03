@@ -99,8 +99,8 @@ module.exports = {
     devServer:{
         inline: true,
         compress: true,
-        host: '127.0.0.1',
-        port: 2505,
+        host: 'localhost',
+        port: 8081,
         historyApiFallback: true,
         // proxy: {
         //     "/axsfw/code": {

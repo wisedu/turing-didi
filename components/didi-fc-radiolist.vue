@@ -1,16 +1,15 @@
 <template>
-    <div>
-        <didi-fc-cell :model="model" :class="{'didi-fc-item-error':isValidate}" :ref="name">
-            <Static v-if="!(!formReadonly && !readonly)" slot="content" :display="display" :value="value"></Static>
-        </didi-fc-cell>
+    <didi-fc-cell :model="model" :class="{'didi-fc-item-error':isValidate}" :ref="name">
         <tg-radio
             v-if="!formReadonly && !readonly"
+            slot="content"
             v-model="currentValue"
             :options="options"
             horizontal
             @change="handleChange">
         </tg-radio>
-    </div>
+        <Static v-else slot="content" :display="display" :value="value"></Static>
+    </didi-fc-cell>  
 </template>
 
 <script>

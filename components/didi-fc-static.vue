@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import {ConnectItem} from 'tg-turing'
-import DidiFcCell from './cell'
-import Static from './static'
+import {ConnectItem} from 'tg-turing';
+import DidiFcCell from './cell';
+import Static from './static';
 export default {
     name:"didi-fc-static",
     extends: ConnectItem,

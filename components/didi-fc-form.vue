@@ -1,10 +1,12 @@
 <template>
-    <form :model="formValue" :label-width="labelWidth" :rules="validateRules" :class="{readonly:readonly}" class="cube-form_standard">
-        <template v-for="item in fields" >
-            <slot :name="item.name" :model="item" :value="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :ref="'field_' + item.name" :formReadonly="readonly">
-                <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
-            </slot>
-        </template>
+    <form :model="formValue" :label-width="labelWidth" :rules="validateRules" :class="{readonly:readonly}" class="didi-form">
+        <tg-cell-group title="">
+            <template v-for="item in fields" >
+                <slot :name="item.name" :model="item" :value="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :ref="'field_' + item.name" :formReadonly="readonly">
+                    <component :ref="'field_' + item.name" :model="item" :is="registedComponentList(item, didiForm, 'static', item.index)" v-model="formValue[item.name]" :display="formValue[item.name + displayFieldFormat]" :formReadonly="readonly" :validate="validateResult[item.name]"  @on-item-change="updateValue" v-bind="mergeDefaultParams(item)"></component>
+                </slot>
+            </template>
+        </tg-cell-group>
     </form>
 </template>
 
@@ -39,7 +41,7 @@ export default {
         return {
             //当前字段隐藏时，让listview组件所占位的格子也隐藏
             didiForm: didiForm,
-            validateResult:[],
+            validateResult:{},
             window:window
         }
     },
@@ -66,7 +68,9 @@ export default {
             // }
             for( var k in this.validateRules){
                 this.validateRules[k].forEach(function(item,index){
-                    item.message +=item.field.caption;
+                    if(item.message.indexOf(item.field.caption) == 0){
+                        item.message +=item.field.caption;
+                    }
                 });
             }
             var validator = new schema(this.validateRules);
@@ -83,9 +87,10 @@ export default {
         },
         handleErrors(errors,fields,callback){
             if(callback){
+                this.validateResult = errors;
                 callback(errors,fields)
             }else {
-                this.validateResult = fields;
+                console.error('验证的回调函数呢~')
             }
             console.log(errors,fields)
         },
@@ -113,6 +118,10 @@ export default {
 </script>
 
 <style>
-
-
+.didi-form .tg-cell-group .md-field .md-field-content .md-field-item {
+    padding-right:2px;
+}
+.didi-form > .tg-cell-group > .md-field > .md-field-content > div:first-child {
+    border-top: solid 1px #EDF2FB;
+}
 </style>
