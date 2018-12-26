@@ -3319,11 +3319,6 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/is-object/-/is-object-1.0.1.tgz#8952688c5ec2ffd6b03ecc85e769e02903083470"
   
-  is-observable@^1.1.0:
-    version "1.1.0"
-    resolved "https://registry.yarnpkg.com/is-observable/-/is-observable-1.1.0.tgz#b3e986c8f44de950867cab5403f5a3465005975e"
-    dependencies:
-      symbol-observable "^1.1.0"
   
   is-odd@^2.0.0:
     version "2.0.0"
@@ -3620,7 +3615,6 @@ Lockfile:
       cli-truncate "^0.2.1"
       figures "^1.7.0"
       indent-string "^2.1.0"
-      is-observable "^1.1.0"
       is-promise "^2.1.0"
       is-stream "^1.1.0"
       listr-silent-renderer "^1.1.1"

@@ -68,7 +68,7 @@ export default {
             // }
             for( var k in this.validateRules){
                 this.validateRules[k].forEach(function(item,index){
-                    if(item.message.indexOf(item.field.caption) == 0){
+                    if(item.message.indexOf(item.field.caption) === -1){
                         item.message +=item.field.caption;
                     }
                 });

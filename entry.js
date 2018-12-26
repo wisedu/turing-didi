@@ -33,7 +33,7 @@ import Form from './components/form.js';
 import { defaults } from "tg-turing";
 import Vue from 'vue';
 import tgUi from 'tg-ui';
-import 'tg-ui/lib/index.css';
+import 'tg-ui/lib/style.css';
 Vue.use(tgUi);
 const components = {
     DidiFcGroup,

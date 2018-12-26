@@ -1,7 +1,8 @@
 <template>
     <div style="margin-top:16px;">
         <button @click="validateForm">校验</button>
-        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :validateRules.sync="descriptor" :readonly="false">
+        <span @click="adjust">修改学号为111</span>
+        <tg-form ref="form" :fields="fields_scd" :value="data" displayFieldFormat="_DISPLAY" :readonly="false">
         </tg-form>
     </div>
 </template>
@@ -127,6 +128,9 @@ export default {
         validateForm(){
             this.$refs.form.validate(this.validateResult)
         },
+        adjust(){
+            this.data.XSBH = "1111";
+        },
         validateResult(errors){
             console.log(errors)
             debugger
@@ -144,6 +148,7 @@ export default {
         });
         //debugger
         //window.setTimeout(function(item){
+            console.log(JSON.stringify(array))
             that.fields_scd = array;
         //},100);
         
