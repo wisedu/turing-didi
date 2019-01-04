@@ -44,13 +44,13 @@ export default {
     methods: {
         validate(callback) {
             var that = this;
-            for( var k in this.validateRules){
-                this.validateRules[k].forEach(function(item,index){
-                    if(item.message.indexOf(item.field.caption) === -1){
-                        item.message +=item.field.caption;
-                    }
-                });
-            }
+            // for( var k in this.validateRules){
+            //     this.validateRules[k].forEach(function(item,index){
+            //         if(item.message.indexOf(item.field.caption) === -1){
+            //             item.message +=item.field.caption;
+            //         }
+            //     });
+            // }
             var validator = new schema(this.validateRules);
             validator.validate(that.formValue, (errors, fields) => {
                 return that.handleErrors(errors, fields,callback);
