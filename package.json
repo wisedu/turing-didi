@@ -1,6 +1,6 @@
 {
   "name": "tg-form-didi",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "main": "dist/tg-turing-didi.min.js",
   "packageName": "tg-form-didi",
   "license": "MIT",
@@ -48,7 +48,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js --mode development",
-    "build": "webpack --config webpack.prod.config.js --mode production",
+    "build": "webpack --config webpack.prod.config.js --mode development",
     "local": "webpack --config webpack.prod.config.js --mode production && cp -r ./dist/* ../turing-example/node_modules/tg-turing-antd/dist/",
     "local2": "webpack --config webpack.prod.config.js --mode production && cp -r ./dist/* ../../GitLab/egg/project-v/node_modules/tg-turing-antd/dist/",
     "esm": "rollup --config ./rollup.config.js",
