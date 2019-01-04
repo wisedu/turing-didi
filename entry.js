@@ -1,6 +1,7 @@
 import {Adapter} from './components/adapter';
 import DidiFcGroup from './components/didi-fc-group.vue';
 import DidiFcForm from './components/didi-fc-form.vue';
+import DidiFcFormCustom from './components/didi-fc-form-custom.vue';
 import DidiFcStatic from './components/didi-fc-static.vue';
 import DidiFcText from './components/didi-fc-text.vue';
 import DidiFcRadio from './components/didi-fc-radio.vue';
@@ -38,6 +39,7 @@ Vue.use(tgUi);
 const components = {
     DidiFcGroup,
     DidiFcForm,
+    DidiFcFormCustom,
     DidiFcStatic,
     DidiFcText,
     Cell,
