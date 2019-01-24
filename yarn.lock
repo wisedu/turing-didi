@@ -451,7 +451,12 @@ autoprefixer@^6.3.1:
 
 axios@0.17.1:
   version "0.17.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
+=======
+  resolved "https://registry.npmjs.org/axios/-/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
+  integrity sha1-LY4+XQvb1zJ/kbyBT1xXZg+Bgk0=
+>>>>>>> f4c00e0718a7ac970fcdfcd4057bc73fe540d443
   dependencies:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
@@ -2671,7 +2676,12 @@ follow-redirects@^1.2.3:
 
 follow-redirects@^1.2.5:
   version "1.6.1"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.6.1.tgz#514973c44b5757368bad8bddfe52f81f015c94cb"
+=======
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.6.1.tgz#514973c44b5757368bad8bddfe52f81f015c94cb"
+  integrity sha512-t2JCjbzxQpWvbhts3l6SH1DKzSrx8a+SsaVf4h6bG4kOXUuPYS/kg2Lr4gQSb7eemaHqJkOThF1BGyjlUkO1GQ==
+>>>>>>> f4c00e0718a7ac970fcdfcd4057bc73fe540d443
   dependencies:
     debug "=3.1.0"
 
@@ -6081,7 +6091,12 @@ textextensions@2:
 
 tg-turing@^1.30.2:
   version "1.30.2"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/tg-turing/-/tg-turing-1.30.2.tgz#c11ca79e05f2999dbc38bd919813422bf5340b54"
+=======
+  resolved "https://registry.npmjs.org/tg-turing/-/tg-turing-1.30.2.tgz#c11ca79e05f2999dbc38bd919813422bf5340b54"
+  integrity sha512-fqJ+mdanWj/pto2u4bHZIrPMq2N425LNF3BocaQZQH8zACebYrDkOxEu96/KG4jNqjJTBb1J6ICmfFyX/AVbeQ==
+>>>>>>> f4c00e0718a7ac970fcdfcd4057bc73fe540d443
   dependencies:
     accounting-js "^1.1.1"
     axios "0.17.1"

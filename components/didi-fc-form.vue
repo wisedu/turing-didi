@@ -74,6 +74,15 @@ export default {
                 });
             }
             var validator = new schema(this.validateRules);
+
+            //当没有传入校验规则时，默认返回true校验通过
+            if (!validator.rules || Object.keys(validator.rules).length === 0) {
+                if (callback) {
+                    callback(true);
+                }
+                return;
+            }
+
             validator.validate(that.formValue, (errors, fields) => {
                 //if(errors) {
                     // validation failed, errors is an array of all errors
@@ -88,7 +97,7 @@ export default {
         handleErrors(errors,fields,callback){
             if(callback){
                 this.validateResult = errors;
-                callback(errors,fields)
+                callback(false,fields)
             }else {
                 console.error('验证的回调函数呢~')
             }
