@@ -23,18 +23,18 @@ export default {
             message: "不能为空"
         }
     },
-    // "date": {
-    //     name: "didi-fc-date",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // },
-    // "date-ym": {
-    //     name: "didi-fc-date",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // },
+    "date": {
+        name: "didi-fc-date",
+        required: {
+            message: "不能为空"
+        }
+    },
+    "date-ym": {
+        name: "didi-fc-date",
+        required: {
+            message: "不能为空"
+        }
+    },
     // "date-range": {
     //     name: "didi-fc-date-range",
     //     required: {
@@ -42,27 +42,27 @@ export default {
     //         message: "不能为空"
     //     }
     // },
-    // "date-local": {
-    //     name: "didi-fc-date",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // },
-    // "date-full": {
-    //     name: "didi-fc-date",
-    //     required: {
-    //         message: "不能为空"
-    //     }
-    // },
-    // "select": {
-    //     name: "didi-fc-select",
-    //     default: {
-    //         async: false
-    //     },
-    //     required: {
-    //         message: "请选择一项"
-    //     }
-    // },
+    "date-local": {
+        name: "didi-fc-date",
+        required: {
+            message: "不能为空"
+        }
+    },
+    "date-full": {
+        name: "didi-fc-date",
+        required: {
+            message: "不能为空"
+        }
+    },
+    "select": {
+        name: "didi-fc-select",
+        default: {
+            async: false
+        },
+        required: {
+            message: "请选择一项"
+        }
+    },
     // "multi-select": {
     //     name: "didi-fc-select",
     //     default: {

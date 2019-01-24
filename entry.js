@@ -4,6 +4,8 @@ import DidiFcForm from './components/didi-fc-form.vue';
 import DidiFcFormCustom from './components/didi-fc-form-custom.vue';
 import DidiFcStatic from './components/didi-fc-static.vue';
 import DidiFcText from './components/didi-fc-text.vue';
+import DidiFcSelect from './components/didi-fc-select.vue';
+import DidiFcDate from './components/didi-fc-date.vue';
 import DidiFcRadio from './components/didi-fc-radio.vue';
 import DidiFcRadiolist from './components/didi-fc-radiolist.vue';
 import DidiFcSwitch from './components/didi-fc-switch.vue';
@@ -42,6 +44,8 @@ const components = {
     DidiFcFormCustom,
     DidiFcStatic,
     DidiFcText,
+    DidiFcDate,
+    DidiFcSelect,
     Cell,
     Static,
     Avatar,
