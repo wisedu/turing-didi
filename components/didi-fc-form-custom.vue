@@ -67,11 +67,15 @@ export default {
         handleErrors(errors,fields,callback){
             if(callback){
                 this.validateResult = errors;
-                callback(false,fields)
+                if(errors && errors.length > 0){
+                    callback(false,fields);
+                }else{
+                    callback(true);
+                }
             }else {
                 console.error('验证的回调函数呢~')
             }
-            console.log(errors,fields)
+//            console.log(errors,fields)
         },
         validateField() {
             this.$refs.form.validateField(prop, callback)
