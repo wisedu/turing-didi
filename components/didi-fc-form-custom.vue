@@ -80,9 +80,9 @@ export default {
                 }
                 var filedLength = Object.getOwnPropertyNames(newFields).length;
                 if (filedLength) {
-                    newErrors = false;
+                    
                 }else {
-                    newErrors = true;
+                    newErrors = [];
                 }
                 return that.handleErrors(newErrors, newFields,callback);
             });
