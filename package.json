@@ -1,6 +1,6 @@
 {
   "name": "tg-form-didi",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist/tg-turing-didi.min.js",
   "packageName": "tg-form-didi",
   "license": "MIT",
@@ -9,8 +9,8 @@
     "axios": "^0.16.1",
     "bh-mixin-sdk": "^0.2.54",
     "mand-mobile": "^1.5.6",
-    "tg-turing": "^1.30.2",
-    "tg-ui": "^0.0.26",
+    "tg-turing": "^1.30.14",
+    "tg-ui": "0.0.27",
     "vue": "^2.5.21"
   },
   "peerDependencies": {

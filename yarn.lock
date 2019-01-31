@@ -6079,9 +6079,9 @@ textextensions@2:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-2.2.0.tgz#38ac676151285b658654581987a0ce1a4490d286"
 
-tg-turing@^1.30.2:
-  version "1.30.2"
-  resolved "https://registry.yarnpkg.com/tg-turing/-/tg-turing-1.30.2.tgz#c11ca79e05f2999dbc38bd919813422bf5340b54"
+tg-turing@^1.30.14:
+  version "1.30.14"
+  resolved "https://registry.yarnpkg.com/tg-turing/-/tg-turing-1.30.14.tgz#93d02aab02267d04b546a7890d710c3b902cce29"
   dependencies:
     accounting-js "^1.1.1"
     axios "0.17.1"
@@ -6089,9 +6089,9 @@ tg-turing@^1.30.2:
     moment "^2.22.1"
     uuid "^3.3.2"
 
-tg-ui@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.26.tgz#6859e68cbdc413dc5224bb0d1012a7778b39817c"
+tg-ui@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.27.tgz#5df0278c59fa88e2748ff96b33cbea2b1c565bb5"
   dependencies:
     compression-webpack-plugin "^1.1.11"
     eventsource-polyfill "^0.9.6"

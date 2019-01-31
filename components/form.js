@@ -117,18 +117,18 @@ export default {
             message: "请选择一项"
         }
     },
-    // "tree": {
-    //     name: "didi-fc-tree",
-    //     required: {
-    //         message: "请选择一项"
-    //     }
-    // },
-    // "multi-tree": {
-    //     name: "didi-fc-tree",
-    //     required: {
-    //         message: "请选择一项"
-    //     }
-    // },
+    "tree": {
+        name: "didi-fc-tree",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "multi-tree": {
+        name: "didi-fc-tree",
+        required: {
+            message: "请选择一项"
+        }
+    },
     // "autocomplete": {
     //     name: "didi-fc-autocomplete",
     //     required: {
