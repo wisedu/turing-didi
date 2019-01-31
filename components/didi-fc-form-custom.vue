@@ -67,8 +67,8 @@ export default {
                     if (newFields.hasOwnProperty(key)) {
                         var element = newFields[key];
                         element.forEach(ele => {
-                            if (that.formData[ele.field].constructor == Object) {
-                            	var isEmpty = (JSON.stringify(that.formData[ele.field]) == "{}");
+                            if (that.formValue[ele.field].constructor == Object) {
+                            	var isEmpty = (JSON.stringify(that.formValue[ele.field]) == "{}");
                             	if (isEmpty) {
 
                             	}else {
