@@ -105,7 +105,7 @@ export default {
             message: "请选择一项"
         }
     },
-    "uploadmuiltimage": {
+    "uploadmuiltimage":{
         name: "didi-fc-uploadimg",
         required: {
             message: "请选择一项"
@@ -124,6 +124,12 @@ export default {
         }
     },
     "multi-tree": {
+        name: "didi-fc-tree",
+        required: {
+            message: "请选择一项"
+        }
+    },
+    "multi-tree2": {
         name: "didi-fc-tree",
         required: {
             message: "请选择一项"
