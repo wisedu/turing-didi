@@ -61,7 +61,30 @@ export default {
             }
 
             validator.validate(that.formValue, (errors, fields) => {
-                return that.handleErrors(errors, fields,callback);
+                var newFields = JSON.parse(JSON.stringify(fields));
+                var newErrors = errors;
+                for (var key in newFields) {
+                    if (newFields.hasOwnProperty(key)) {
+                        var element = newFields[key];
+                        element.forEach(ele => {
+                            if (that.formData[ele.field].constructor == Object) {
+                            	var isEmpty = (JSON.stringify(that.formData[ele.field]) == "{}");
+                            	if (isEmpty) {
+
+                            	}else {
+                                    delete newFields[key];
+                                }
+                            }
+                        });
+                    }
+                }
+                var filedLength = Object.getOwnPropertyNames(newFields).length;
+                if (filedLength) {
+                    newErrors = false;
+                }else {
+                    newErrors = true;
+                }
+                return that.handleErrors(newErrors, newFields,callback);
             });
         },
         handleErrors(errors,fields,callback){
