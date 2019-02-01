@@ -63,26 +63,28 @@ export default {
             validator.validate(that.formValue, (errors, fields) => {
                 var newFields = JSON.parse(JSON.stringify(fields));
                 var newErrors = errors;
-                for (var key in newFields) {
-                    if (newFields.hasOwnProperty(key)) {
-                        var element = newFields[key];
-                        element.forEach(ele => {
-                            if (that.formValue[ele.field] && that.formValue[ele.field].constructor == Object) {
-                            	var isEmpty = (JSON.stringify(that.formValue[ele.field]) == "{}");
-                            	if (isEmpty) {
+                if (newFields) {
+                    for (var key in newFields) {
+                        if (newFields.hasOwnProperty(key)) {
+                            var element = newFields[key];
+                            element.forEach(ele => {
+                                if (that.formValue[ele.field] && that.formValue[ele.field].constructor == Object) {
+                                    var isEmpty = (JSON.stringify(that.formValue[ele.field]) == "{}");
+                                    if (isEmpty) {
 
-                            	}else {
-                                    delete newFields[key];
+                                    }else {
+                                        delete newFields[key];
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
                     }
-                }
-                var filedLength = Object.getOwnPropertyNames(newFields).length;
-                if (filedLength) {
-                    
-                }else {
-                    newErrors = [];
+                    var filedLength = Object.getOwnPropertyNames(newFields).length;
+                    if (filedLength) {
+                        
+                    }else {
+                        newErrors = [];
+                    }
                 }
                 return that.handleErrors(newErrors, newFields,callback);
             });
