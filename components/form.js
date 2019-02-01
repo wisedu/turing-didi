@@ -159,14 +159,14 @@ export default {
             message: "请选择一项"
         }
     },
-    // "checkboxlist": {
-    //     name: "didi-fc-checkboxlist",
-    //     required: {
-    //         type: 'array',
-    //         min: 1,
-    //         message: "请选择一项"
-    //     }
-    // },
+    "checkboxlist": {
+        name: "didi-fc-checkboxlist",
+        required: {
+            type: 'array',
+            min: 1,
+            message: "请选择一项"
+        }
+    },
     "switcher": {
         name: "didi-fc-switch",
         required: {
