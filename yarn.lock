@@ -5712,6 +5712,15 @@ shelljs@^0.8.0:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
+shelljs@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.npmjs.org/shelljs/-/shelljs-0.8.3.tgz#a7f3319520ebf09ee81275b2368adb286659b097"
+  integrity sha512-fc0BKlAWiLpwZljmOvAOTE/gXawtCoNrP5oaY7KIaQbbyHeQVg01pSEuEGvGh3HEdBU4baCD7wQBwADmM/7f7A==
+  dependencies:
+    glob "^7.0.0"
+    interpret "^1.0.0"
+    rechoir "^0.6.2"
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -6081,7 +6090,8 @@ textextensions@2:
 
 tg-turing@^1.30.15:
   version "1.30.15"
-  resolved "https://registry.yarnpkg.com/tg-turing/-/tg-turing-1.30.15.tgz#b6116a9c72aa3b24b30ff05ead0c0840d6299928"
+  resolved "https://registry.npmjs.org/tg-turing/-/tg-turing-1.30.15.tgz#b6116a9c72aa3b24b30ff05ead0c0840d6299928"
+  integrity sha512-uwvaRB6KgqFUrJpoRJxDRMwyGeN3RQr3cZE6u02VVYIrfN2m+UBLqEodGrj0FPOuPitNdC1cpF8DOGH81ckNXQ==
   dependencies:
     accounting-js "^1.1.1"
     axios "0.17.1"
