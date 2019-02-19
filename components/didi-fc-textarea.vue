@@ -40,7 +40,7 @@ export default {
     },
     created(){
         //debugger
-        this.currentValue = this.value;
+        this.currentValue = this.value?this.value:'';
     },
     watch:{
         currentValue(val){
