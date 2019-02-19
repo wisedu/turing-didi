@@ -5715,7 +5715,6 @@ shelljs@^0.8.0:
 shelljs@^0.8.3:
   version "0.8.3"
   resolved "https://registry.npmjs.org/shelljs/-/shelljs-0.8.3.tgz#a7f3319520ebf09ee81275b2368adb286659b097"
-  integrity sha512-fc0BKlAWiLpwZljmOvAOTE/gXawtCoNrP5oaY7KIaQbbyHeQVg01pSEuEGvGh3HEdBU4baCD7wQBwADmM/7f7A==
   dependencies:
     glob "^7.0.0"
     interpret "^1.0.0"
@@ -6090,8 +6089,7 @@ textextensions@2:
 
 tg-turing@^1.30.15:
   version "1.30.15"
-  resolved "https://registry.npmjs.org/tg-turing/-/tg-turing-1.30.15.tgz#b6116a9c72aa3b24b30ff05ead0c0840d6299928"
-  integrity sha512-uwvaRB6KgqFUrJpoRJxDRMwyGeN3RQr3cZE6u02VVYIrfN2m+UBLqEodGrj0FPOuPitNdC1cpF8DOGH81ckNXQ==
+  resolved "https://registry.yarnpkg.com/tg-turing/-/tg-turing-1.30.15.tgz#b6116a9c72aa3b24b30ff05ead0c0840d6299928"
   dependencies:
     accounting-js "^1.1.1"
     axios "0.17.1"
@@ -6099,9 +6097,9 @@ tg-turing@^1.30.15:
     moment "^2.22.1"
     uuid "^3.3.2"
 
-tg-ui@^0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.28.tgz#857c03da9ebb7d091ef90c678135bee9b8538f38"
+tg-ui@^0.0.29:
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.29.tgz#3d3be5f354c3d11f66430ffe736821de52483fb5"
   dependencies:
     compression-webpack-plugin "^1.1.11"
     eventsource-polyfill "^0.9.6"
