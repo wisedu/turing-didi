@@ -10,7 +10,7 @@
     "bh-mixin-sdk": "^0.2.54",
     "mand-mobile": "^1.5.6",
     "tg-turing": "^1.30.15",
-    "tg-ui": "^0.0.29",
+    "tg-ui": "^0.0.30",
     "vue": "^2.5.21"
   },
   "peerDependencies": {

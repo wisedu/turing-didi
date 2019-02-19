@@ -3,7 +3,7 @@
         <tg-datetime-picker
             v-if="!formReadonly && !readonly"
             slot="content"
-			v-model="value"
+			v-model="currentValue"
 			:placeholder="placeholder||'请选择'"
 			:type="type"
 			:segment-picker="isdatetime"

@@ -6097,9 +6097,9 @@ tg-turing@^1.30.15:
     moment "^2.22.1"
     uuid "^3.3.2"
 
-tg-ui@^0.0.29:
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.29.tgz#3d3be5f354c3d11f66430ffe736821de52483fb5"
+tg-ui@^0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/tg-ui/-/tg-ui-0.0.30.tgz#c00caa2ad58a0323316986484a8cfb65c74ef8a3"
   dependencies:
     compression-webpack-plugin "^1.1.11"
     eventsource-polyfill "^0.9.6"
