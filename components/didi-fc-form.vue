@@ -128,7 +128,7 @@ export default {
 
 <style>
 .didi-form .tg-cell-group .md-field .md-field-content .md-field-item {
-    padding-right:2px;
+    /* padding-right:2px; */
 }
 .didi-form > .tg-cell-group > .md-field > .md-field-content > div:first-child {
     border-top: solid 1px #EDF2FB;

@@ -28,14 +28,14 @@ export default {
     },
     computed:{
         currentValue:function(){
-            var key = this.model.xtype;
-			switch (key) {
-				case 'date-full':
-					return this.value.split(' ');
-					break;
-				default:
+            // var key = this.model.xtype;
+			// switch (key) {
+			// 	case 'date-full':
+			// 		return this.value.split(' ');
+			// 		break;
+			// 	default:
 					return this.value;
-					break;
+					// break;
 			}
         },
 		type:function(){
