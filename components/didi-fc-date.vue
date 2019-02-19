@@ -36,7 +36,7 @@ export default {
 			// 	default:
 					return this.value;
 					// break;
-			}
+			// }
         },
 		type:function(){
 			// debugger;
