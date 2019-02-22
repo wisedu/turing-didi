@@ -96,7 +96,9 @@ export default {
         },
         handleErrors(errors,fields,callback){
             if(callback){
-                this.validateResult = errors;
+                if (errors) {
+                    this.validateResult = errors;
+                }
                 callback(false,fields)
             }else {
                 console.error('验证的回调函数呢~')
