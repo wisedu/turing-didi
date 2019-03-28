@@ -1,6 +1,6 @@
 {
   "name": "tg-form-didi",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "main": "dist/tg-turing-didi.min.js",
   "packageName": "tg-form-didi",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "bh-mixin-sdk": "^0.2.54",
     "mand-mobile": "^1.5.6",
     "tg-turing": "^1.30.16",
-    "tg-ui": "^0.0.31",
+    "tg-ui": "^0.0.32",
     "vue": "^2.5.21"
   },
   "peerDependencies": {
@@ -27,6 +27,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
@@ -43,7 +44,7 @@
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.22",
     "webpack": "^4.12.0",
-    "webpack-cli": "^2.1.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.4",
     "webpack-transform-modules-plugin": "^0.3.5"
   },
