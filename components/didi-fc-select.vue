@@ -4,7 +4,8 @@
             v-if="!formReadonly && !readonly"
             slot="content"
             v-model="selectvalue" 
-            :options="fullOptions" 
+            :options="fullOptions"
+            align="right"
             @confirm="handleConfirm" 
             @cancel="handleCancel"
         ></tg-select>

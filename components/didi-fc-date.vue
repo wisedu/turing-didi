@@ -7,6 +7,7 @@
 			:placeholder="placeholder||'请选择'"
 			:type="type"
 			:segment-picker="isdatetime"
+			align="right"
 			@confirm="handleConfirm"
 		>
 		</tg-datetime-picker>
