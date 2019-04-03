@@ -1,6 +1,6 @@
 {
   "name": "tg-form-didi",
-  "version": "0.1.33",
+  "version": "0.1.34",
   "main": "dist/tg-turing-didi.min.js",
   "packageName": "tg-form-didi",
   "license": "MIT",
