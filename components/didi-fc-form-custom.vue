@@ -18,7 +18,8 @@ export default {
     },
     props:{
         labelWidth:Number,
-        value:Object
+        value:Object,
+        validateRules:Array
     },
     watch:{
         fields(val){
