@@ -5,8 +5,9 @@
             slot="content"
             v-model="currentValue"
             :placeholder="placeholderText"
-            autosize
-            :indicator="false"
+            :autosize="autosize"
+            :indicator="indicator"
+            :maxlength="maxlength"
         ></tg-textarea>
         <Static v-else slot="content" :display="display" :value="value"></Static>
     </didi-fc-cell>
@@ -24,7 +25,9 @@ export default {
             currentValue:'',
             validateItem:this.validate,
             placeholderText:"请输入",
-            isValidate:false
+            isValidate:false,
+            autosize:this.model.autosize || false,
+            indicator:this.model.indicator || true
         } 
     },
     props:{
@@ -37,6 +40,13 @@ export default {
         //     }
         //     return ;
         // }
+        maxlength(){
+            if (this.model.checkSize) {
+                return this.model.checkSize;
+            } else {
+                return this.model.dataSize;
+            }
+        }
     },
     created(){
         //debugger
