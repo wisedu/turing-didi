@@ -135,4 +135,5 @@ export default {
 .didi-form > .tg-cell-group > .md-field > .md-field-content > div:first-child {
     border-top: solid 1px #EDF2FB;
 }
+
 </style>

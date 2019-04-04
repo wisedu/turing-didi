@@ -1,5 +1,5 @@
 <template>
-    <didi-fc-cell :model="model" v-model="value">
+    <didi-fc-cell :model="model" v-model="value" align="right">
         <tg-datetime-picker
             v-if="!formReadonly && !readonly"
             slot="content"
