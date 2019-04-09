@@ -29,8 +29,8 @@ export default {
         }
     },
     watch:{
-    	value:function(new){
-    		this.currentValue = new;
+    	value:function(newValue){
+    		this.currentValue = newValue;
     	}
     },
     computed:{

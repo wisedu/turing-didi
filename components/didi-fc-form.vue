@@ -88,22 +88,20 @@ export default {
             }
 
             validator.validate(that.formValue, (errors, fields) => {
-                //if(errors) {
-                    // validation failed, errors is an array of all errors
-                    // fields is an object keyed by field name with an array of
-                    // errors per field
+                    console.log('validator.validate');
+                    console.log(errors,fields);
                     return that.handleErrors(errors, fields,callback);
-                //}
-                // validation passed
+
             });
-            //this.$refs.form.validate(callback)
         },
         handleErrors(errors,fields,callback){
             if(callback){
                 if (errors) {
                     this.validateResult = errors;
+                    callback(false,fields);
+                }else {
+                    callback(true,fields);
                 }
-                callback(false,fields)
             }else {
                 console.error('验证的回调函数呢~')
             }
