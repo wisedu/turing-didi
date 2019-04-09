@@ -68,8 +68,12 @@ export default {
             // }
             for( var k in this.validateRules){
                 this.validateRules[k].forEach(function(item,index){
-                    if(item.message.indexOf(item.field.caption) === -1){
-                        item.message +=item.field.caption;
+                    if (item.field.msg) {
+                        item.message = item.field.msg;
+                    } else {
+                        if(item.message.indexOf(item.field.caption) === -1){
+                            item.message +=item.field.caption;
+                        }
                     }
                 });
             }
