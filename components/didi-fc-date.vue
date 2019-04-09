@@ -24,21 +24,16 @@ export default {
     extends: ConnectItem,
     data(){
         return {
-            isdatetime:false
+            isdatetime:false,
+            currentValue:this.value
         }
     },
+    watch:{
+    	value:function(new){
+    		this.currentValue = new;
+    	}
+    },
     computed:{
-        currentValue:function(){
-            // var key = this.model.xtype;
-			// switch (key) {
-			// 	case 'date-full':
-			// 		return this.value.split(' ');
-			// 		break;
-			// 	default:
-					return this.value;
-					// break;
-			// }
-        },
 		type:function(){
 			// debugger;
 			var key = this.model.xtype;
