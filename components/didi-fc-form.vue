@@ -50,24 +50,39 @@ export default {
     methods: {
         validate(callback) {
             var that = this;
-            // var copyValidateRules = JSON.parse(JSON.stringify(this.validateRules));
-            // for( var k in copyValidateRules){
-            //     console.log(k+'长度:',copyValidateRules[k].length)
-            //     if(copyValidateRules[k].length === 1){
-            //         var caption = copyValidateRules[k][0].field.caption;
-            //         console.log('caption:'+caption)
-            //         var message = copyValidateRules[k][0].message;
-            //         console.log('message:'+message)
-            //         var total = message + caption;
-            //         this.validateRules[k][0].message=total;
-            //     }else {
-            //         copyValidateRules[k].forEach(function(item,index){
-            //             this.validateRules[k][index].message = item.message + item.field.caption;
-            //         });
-            //     }
-            // }
-            for( var k in this.validateRules){
-                this.validateRules[k].forEach(function(item,index){
+            var copyValidateRules = JSON.parse(JSON.stringify(this.validateRules));
+            //加入长度校验规则
+            that.fields.forEach(function(item,index){
+                var lengthValidate = {
+                    type: "string",
+                    field:item,
+                    message:'长度超出限制',
+                    validator: function(rule, val){
+                        var len = 0;
+                        for (var index = 0; index < val.length; index++) {
+                            if (val[index].match(/[^\x00-\xff]/ig) !== null) {
+                                len += 3;
+                            } else {
+                                len++;
+                            }
+                        }
+                        if (len - (item.dataSize || 400) >0) {
+                            return false;
+                        } else {
+                            return true;
+                        }
+                        
+                    }
+                };
+                if (copyValidateRules[item.name]) {
+                    copyValidateRules[item.name].push(lengthValidate);
+                }else {
+                    copyValidateRules[item.name] = [lengthValidate];
+                }
+            });
+            // debugger;
+            for( var k in copyValidateRules){
+                copyValidateRules[k].forEach(function(item,index){
                     if (item.field.msg) {
                         item.message = item.field.msg;
                     } else {
@@ -77,7 +92,7 @@ export default {
                     }
                 });
             }
-            var validator = new schema(this.validateRules);
+            var validator = new schema(copyValidateRules);
 
             //当没有传入校验规则时，默认返回true校验通过
             if (!validator.rules || Object.keys(validator.rules).length === 0) {
