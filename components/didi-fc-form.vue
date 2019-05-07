@@ -83,7 +83,9 @@ export default {
                         copyValidateRules[item.name].push(lengthValidate);
                     }
                 }else {
-                    copyValidateRules[item.name] = [lengthValidate];
+                    if(item.dataType != 'Timestamp'){
+                        copyValidateRules[item.name] = [lengthValidate];
+                    }
                 }
             });
             // debugger;
