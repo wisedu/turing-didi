@@ -78,7 +78,8 @@ export default {
                     var firstChild = copyValidateRules[item.name][0];
                     if (firstChild.type === 'String') {
                         firstChild.type = 'string';
-                    }else if(firstChild.type != 'Datetime'){
+                        copyValidateRules[item.name].push(lengthValidate);
+                    }else if(firstChild.type != 'Timestamp' && firstChild.field.dataType != 'Timestamp'){
                         copyValidateRules[item.name].push(lengthValidate);
                     }
                 }else {
