@@ -75,7 +75,12 @@ export default {
                     }
                 };
                 if (copyValidateRules[item.name]) {
-                    copyValidateRules[item.name].push(lengthValidate);
+                    var firstChild = copyValidateRules[item.name][0];
+                    if (firstChild.type === 'String') {
+                        firstChild.type = 'string';
+                    }else if(firstChild.type != 'Datetime'){
+                        copyValidateRules[item.name].push(lengthValidate);
+                    }
                 }else {
                     copyValidateRules[item.name] = [lengthValidate];
                 }
