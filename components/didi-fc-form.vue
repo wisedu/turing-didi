@@ -58,20 +58,23 @@ export default {
                     field:item,
                     message:'长度超出限制',
                     validator: function(rule, val){
-                        var len = 0;
-                        for (var index = 0; index < val.length; index++) {
-                            if (val[index].match(/[^\x00-\xff]/ig) !== null) {
-                                len += 3;
-                            } else {
-                                len++;
+                        if (val) {
+                            var len = 0;
+                            for (var index = 0; index < val.length; index++) {
+                                if (val[index].match(/[^\x00-\xff]/ig) !== null) {
+                                    len += 3;
+                                } else {
+                                    len++;
+                                }
                             }
-                        }
-                        if (len - (item.dataSize || 400) >0) {
-                            return false;
+                            if (len - (item.dataSize || 400) >0) {
+                                return false;
+                            } else {
+                                return true;
+                            }
                         } else {
                             return true;
                         }
-                        
                     }
                 };
                 if (copyValidateRules[item.name]) {
